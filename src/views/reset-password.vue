@@ -11,7 +11,7 @@
         <input type="password" placeholder="Repeat Password" name="psw" required>
 
       <div class="clearfix">
-      <button type="submit" class="sumbit-button">Reset</button>
+      <button type="submit" class="re-set-button">Reset Password</button>
     </div>
   </div>
 </form>
@@ -24,7 +24,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Re-set Password'
+      msg: 'Reset Password'
     }
   }
 }
@@ -50,7 +50,7 @@ input[type=password]:focus {
   outline: none;
 }
 
-.submit-button {
+.re-set-button {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -59,9 +59,11 @@ input[type=password]:focus {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  width: 100%;
+  float: left;
 }
 
-.submit-button:hover {
+.re-set-button:hover {
   opacity:1;
 }
 
