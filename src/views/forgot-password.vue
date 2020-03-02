@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'forgpt-password',
   data () {
     return {
       msg: 'Forgot Password'

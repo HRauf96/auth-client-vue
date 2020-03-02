@@ -33,17 +33,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Sign Up'
-    }
-  }
-}
-</script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1.header{
@@ -114,3 +103,14 @@ margin: auto;
   opacity:1;
 }
 </style>
+
+<script>
+export default {
+  name: 'signup',
+  data () {
+    return {
+      msg: 'Sign Up'
+    }
+  }
+}
+</script>

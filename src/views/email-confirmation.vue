@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'email-confirmation',
   data () {
     return {
       msg: 'Email Confirmed'

@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'reset-password',
   data () {
     return {
       msg: 'Reset Password'
