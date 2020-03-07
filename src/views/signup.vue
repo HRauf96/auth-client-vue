@@ -23,8 +23,10 @@
         <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
       <div class="clearfix">
-      <button type="submit" class="log-in-button">Log In</button>
-      <button type="submit" class="sign-up-button">Sign Up</button>
+      <router-link :to="{ name: 'login' }">
+      <button class="log-in-button">Log In</button>
+      </router-link>
+        <button type="submit" class="sign-up-button">Sign Up</button>
     </div>
   </div>
 </form>

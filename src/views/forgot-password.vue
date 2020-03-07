@@ -12,7 +12,10 @@
         <input type="text" placeholder="Enter Email" name="email" required>
 
       <div class="clearfix">
-      <button type="submit" class="forgot-button">Forgot Password</button>
+      <router-link :to="{ name: 'login' }">
+        <button type="submit" class="log-in-button">Login</button>
+      </router-link>
+      <button type="submit" class="forgot-button">Send Reset Link</button>
     </div>
   </div>
 </form>
@@ -60,7 +63,7 @@ input[type=text]:focus{
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
-  width: 100%;
+  width: 66%;
   float: left;
 }
 
@@ -84,4 +87,20 @@ margin: auto;
   display: table;
 }
 * {box-sizing: border-box}
+
+.log-in-button {
+  background-color: rgb(175, 76, 76);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  width: 33%;
+  float: left;
+}
+
+.log-in-button:hover {
+  opacity:1;
+}
 </style>

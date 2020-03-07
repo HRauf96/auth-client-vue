@@ -10,17 +10,21 @@
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <label class="forgot-password-label">
-      Forgot Password?
-    </label>
+     
+        <router-link :to="{ name: 'forgot-password' }">   
+          <label class="forgot-password-label">
+            Forgot Password?
+          </label>
+        </router-link>
         
     <label class="remember-me-label">
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
     </label>
 
       <div class="clearfix">
-      <button type="submit" class="sign-up-button">Sign Up</button>
+      <router-link :to="{ name: 'signup' }">
+        <button type="submit" class="sign-up-button">Sign Up</button>
+      </router-link>
       <button type="submit" class="log-in-button">Log In</button>
     </div>
   </div>
@@ -87,6 +91,16 @@ margin: auto;
 .forgot-password-label, .remember-me-label{
   width: 50%;
   float: left;
+}
+
+.forgot-password-label{
+  color: #02075d;
+}
+
+.forgot-password-label:hover{
+  text-decoration: underline;
+  color: #3942f0;
+  cursor: pointer;
 }
 
 .sign-up-button {
