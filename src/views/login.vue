@@ -1,12 +1,13 @@
 <template>
   <div class="hello">
     <h1 class="header">{{ msg }}</h1>
+    <h2 v-if="errorH2" class="error">{{ errorH2 }}</h2>
     <div id="root" class="container">
-      <form class="form-sign-up">
+      <form @submit.prevent="onSubmit" class="form-sign-up">
       <div class="form-container">
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <input type="text" placeholder="Enter Email" v-model="email" name="email" required>
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
@@ -23,9 +24,9 @@
 
       <div class="clearfix">
       <router-link :to="{ name: 'signup' }">
-        <button type="submit" class="sign-up-button">Sign Up</button>
+        <button class="sign-up-button">Sign Up</button>
       </router-link>
-      <button type="submit" class="log-in-button">Log In</button>
+      <button class="log-in-button">Log In</button>
     </div>
   </div>
 </form>
@@ -123,11 +124,28 @@ margin: auto;
 </style>
 
 <script>
+import { mapState } from 'vuex';
+import store from '@/store';
+import { SIGNIN } from '@/store/actions.type';
+
 export default {
   name: 'login',
   data () {
     return {
+      email: null,
       msg: 'Login'
+    }
+  },
+  computed: {
+    ...mapState({
+      errorH2: state => state.auth.error
+    })
+  },
+  methods: {
+    onSubmit() {
+      this.$store.dispatch(SIGNIN, {
+        Email: this.email
+      })
     }
   }
 }
