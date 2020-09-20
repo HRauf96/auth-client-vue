@@ -30,6 +30,11 @@ export default new Router({
       path: '/email-confirmation',
       name: 'email-confirmation',
       component: () => import("@/views/email-confirmation")
+    },
+    {
+      path: '/signed-in',
+      name: 'signed-in',
+      component: () => import("@/views/signed-in")
     }
   ]
 })

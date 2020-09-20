@@ -18,6 +18,7 @@ const actions = {
   [SIGNIN](context, payload) {
     console.log("Signing in...")
     var evenOdd = Math.floor(Math.random() * 100) % 2
+    // var evenOdd = 0
     if (evenOdd == 0) {
       context.commit(SET_USER, payload)
       context.commit(SET_ERROR, null)

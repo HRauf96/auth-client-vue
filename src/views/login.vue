@@ -146,6 +146,7 @@ export default {
       this.$store.dispatch(SIGNIN, {
         Email: this.email
       })
+      .then(() => this.$router.push({ name: 'signed-in' }));
     }
   }
 }
